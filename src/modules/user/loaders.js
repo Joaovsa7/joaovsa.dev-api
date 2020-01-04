@@ -4,7 +4,7 @@ const batchQuery = require('../helpers/batchQuery');
 
 const loaders = () => ({
 	getUserById: new DataLoader(batchQuery(userDataSource.getById)),
-	getAll: new DataLoader(async args => args.map(userDataSource.getAll)),
+	getAll: new DataLoader(async keys => keys.map(userDataSource.getAll)),
 });
 
 module.exports = loaders;
