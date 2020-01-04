@@ -80,7 +80,7 @@ const userDataSource = {
 		}
 	},
 
-	async deleteUser(id) {
+	async inactiveUser(id) {
 		const [userToBeDeleted = null] = await db
 			.connection()
 			.select('*')

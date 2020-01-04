@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
+    "start": "node src/server/index.js",
     "dev": "nodemon src/server/index.js"
   },
   "author": "joaovsa",
@@ -16,6 +17,8 @@
   "dependencies": {
     "apollo-server": "^2.9.14",
     "apollo-server-express": "^2.9.14",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
     "dataloader": "^2.0.0",
     "eslint-config-prettier": "^6.8.0",
     "eslint-plugin-prettier": "^3.1.2",

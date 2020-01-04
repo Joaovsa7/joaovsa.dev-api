@@ -9,7 +9,7 @@ const typeDefs = gql`
 	extend type Mutation {
 		createUser(user: UserData): CreateUserResponse
 		updateUser(id: Int!, user: UserData): User
-		deleteUser(id: Int!): User
+		inactiveUser(id: Int!): User
 	}
 
 	type User {

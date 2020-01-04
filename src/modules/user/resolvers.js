@@ -27,8 +27,8 @@ const resolvers = {
 			return userResponse;
 		},
 
-		async deleteUser(_, { id }, { datasource }) {
-			const deletedUser = await datasource.user.deleteUser(id);
+		async inactiveUser(_, { id }, { datasource }) {
+			const deletedUser = await datasource.user.inactiveUser(id);
 			if (deletedUser.errors) {
 				throw deletedUser.errors;
 			}
