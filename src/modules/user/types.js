@@ -7,7 +7,9 @@ const typeDefs = gql`
 	}
 
 	extend type Mutation {
-		createUser(user: CreateUser): CreateUserResponse
+		createUser(user: UserData): CreateUserResponse
+		updateUser(id: Int!, user: UserData): User
+		deleteUser(id: Int!): User
 	}
 
 	type User {
@@ -22,12 +24,24 @@ const typeDefs = gql`
 		deleted_at: DateTime
 	}
 
-	input CreateUser {
+	input UserData {
 		firstName: String
 		lastName: String
 		userName: String
 		password: String
 		email: String
+	}
+
+	input UpdateUser {
+		firstName: String
+		lastName: String
+		userName: String
+		password: String
+		email: String
+	}
+
+	input DeleteUser {
+		id: Int
 	}
 
 	type CreateUserResponse {

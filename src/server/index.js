@@ -9,7 +9,7 @@ const server = new ApolloServer({
 	context: {
 		loaders,
 		datasource,
-		getFields: arg => Object.keys(graphqlFields(arg)),
+		getFields: ast => Object.keys(graphqlFields(ast)),
 	},
 });
 

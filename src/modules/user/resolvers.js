@@ -18,6 +18,22 @@ const resolvers = {
 			}
 			return userResponse;
 		},
+
+		async updateUser(_, { id, user }, { datasource }) {
+			const userResponse = await datasource.user.updateUser({ id, user });
+			if (userResponse.errors) {
+				throw userResponse.errors;
+			}
+			return userResponse;
+		},
+
+		async deleteUser(_, { id }, { datasource }) {
+			const deletedUser = await datasource.user.deleteUser(id);
+			if (deletedUser.errors) {
+				throw deletedUser.errors;
+			}
+			return deletedUser;
+		},
 	},
 };
 

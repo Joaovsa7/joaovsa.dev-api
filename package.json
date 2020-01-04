@@ -7,8 +7,12 @@
     "test": "test",
     "dev": "nodemon src/server/index.js"
   },
-  "author": "",
+  "author": "joaovsa",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Joaovsa7/joaovsa.dev-api"
+  },
   "dependencies": {
     "apollo-server": "^2.9.14",
     "apollo-server-express": "^2.9.14",
