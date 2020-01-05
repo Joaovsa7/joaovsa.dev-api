@@ -20,7 +20,7 @@ const typeDefs = [root, userTypes];
 const resolvers = _merge(userResolvers);
 
 const loaders = {
-	user: userLoaders(),
+	user: userLoaders,
 };
 
 const datasource = {
